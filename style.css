@@ -1,0 +1,201 @@
+/****************************************************** Glocal CSS ******************************************************/
+/* Declaring the colors in glocal css variables */
+:root {
+  /* Primary Color */
+  --Orange: hsl(25, 97%, 53%);
+
+  /* Neutral Color */
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+  /* Star icon color by me */
+  --star-icon-color: hsla(216, 12%, 8%, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/****************************************************** Custom CSS ******************************************************/
+.container,
+.thank_you {
+  background-color: var(--Dark-Blue);
+  padding: 2rem;
+  border-radius: 2rem;
+  max-width: 400px;
+}
+
+.container img {
+  background-color: var(--star-icon-color);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.container .main_title {
+  color: #fff;
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+.container .rating_para {
+  color: var(--Light-Grey);
+  margin-top: 0.8rem;
+  gap: 1;
+}
+
+.container ul {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container ul li button {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--star-icon-color);
+  border-radius: 50%;
+  border: none;
+  margin-bottom: 1.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Medium-Grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container ul li button:hover {
+  background-color: var(--Orange);
+  color: #fff;
+}
+
+.container ul li button:focus {
+  background-color: var(--Light-Grey);
+  color: #fff;
+}
+
+.btn_submit {
+  width: 100%;
+  background-color: var(--Orange);
+  color: #fff;
+  margin: auto;
+  padding: 0.8rem 0 0.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.btn_submit:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.thank_you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1;
+  text-align: center;
+}
+
+.hide_class {
+  display: none;
+}
+
+.thank_you img {
+  margin-bottom: 2rem;
+}
+
+.thank_you .rating_line {
+  color: var(--Orange);
+  margin-top: 0.8rem;
+  gap: 1;
+  background-color: var(--star-icon-color);
+  margin: auto;
+  padding: 0.3rem 1.5rem 0.3rem;
+  border-radius: 2.5rem;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.thank_you h2 {
+  color: #fff;
+  margin: 2rem 0 0.8rem 0;
+}
+
+.thank_you .appreciate_para {
+  color: var(--Light-Grey);
+  margin-bottom: 1rem;
+  gap: 1;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 650px) {
+  .container,
+  .thank_you {
+    width: 90%;
+  }
+  .container ul li button {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .container,
+  .thank_you {
+    width: 95%;
+  }
+  .container .main_title {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  .container ul li button {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}
